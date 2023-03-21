@@ -1,0 +1,147 @@
+html{
+    font-size: 62.5%;
+    max-width: var(--max-width-size);
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    display: grid;
+    grid-template-areas:"header"
+                        "main"
+                        "footer";
+    grid-template-rows: repeat(3, 1fr);
+    font-size: 1.6rem;
+    height: 100vh;
+    background: url(../images/bg-desktop.svg) center center no-repeat;
+    background-size: cover;
+    background-color: var(--cor-primaria);
+    padding: 26px 73px 5px;
+
+
+}
+
+.header{
+    grid-area: header;
+
+}
+
+.header img {
+    width: 215px;
+    padding-top: 40px;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin-left: 3px;
+    grid-gap: 53px;
+}
+
+.main .titulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #FFF;
+    font-size: 40px;
+}
+
+.main .informacao {
+    color: #FFF;
+    padding-top: 40px;
+    padding-right: 10px;
+}
+
+.main .informacao p{
+    font-size: 18px;
+    margin-bottom: 50px;
+
+}
+
+.main .btn{
+    background-color: #FFF;
+    border-radius: 35px;
+    padding: 15px 65px;
+    transition: 0.3s;
+    color: var(--cor-primaria);
+}
+
+.main .btn:hover {
+    background-color: var(--cor-secundaria);
+    color: #FFF;
+}
+
+
+.footer {
+    grid-area: footer;
+}
+
+.footer .social {
+    display: flex;
+    align-items: center;
+    padding-left: 88%;
+}
+
+.footer .social i{
+    font-size: 2rem;
+}
+
+.footer .social a{
+    margin: 15px;
+    color: #FFF;
+    transition: 0.3s;
+}
+
+.footer .social a:hover{
+    color: var(--cor-secundaria);
+}
+
+@media (max-width: 375px){
+    body {
+        padding: 25px;
+        background: url(../images/bg-mobile.svg) center center no;
+        background-color: var(--cor-primaria);
+    }
+
+    .header{
+        width: 125px;
+        padding: 5px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .main .layout{
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .main .titulo{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .main .informacao p{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .main .btn {
+        font-size: 12px;
+        padding: 10px 70px;
+    }
+
+    .footer .social {
+        padding: 60px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .social i{
+        font-size: 1.6rem;
+    }
+}
